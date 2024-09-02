@@ -38,6 +38,8 @@ const config: HardhatUserConfig = {
     pyth: {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       84532: "0xA2aa501b19aff244D90cc15a4Cf739D2725B5729",
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      8453: "0x8250f4aF4B972684F7b336503E2D6dFeDeB1487a",
     },
   },
   networks: {
@@ -49,6 +51,11 @@ const config: HardhatUserConfig = {
     baseSepolia: {
       chainId: 84532,
       url: "https://sepolia.base.org",
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    },
+    base: {
+      chainId: 8453,
+      url: "https://mainnet.base.org",
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
   },
